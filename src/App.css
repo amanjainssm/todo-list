@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;500&family=Ruwudu&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 500;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: #c5abff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;   
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App{
+    text-align: center;
+}
+
+.h1{
+    color: aliceblue;
+    font-family: 'Ruwudu';
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.todo-wrapper {
+    background-color:#083242;
+    margin: 64px;
+    padding: 28px;
+    border-radius: 12px;
+}
+
+.todo-form{
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color:#c5aeff;
+    padding: 0px 16px;
+    margin-bottom: 16px;
+    color: #083242;
+    border-radius: 8px;
+}
+
+.todo-input{
+    outline: none;
+    background: none;
+    color: #c5aeff;
+    border: 1px solid #c5aeff;
+    padding: 6px;
+    width: 330px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;   
+    font-size: 16px; 
+}
+
+.todo-input::placeholder{
+    color:aliceblue;
+}
+
+.todo-btn{
+    background-color: #c5aeff;
+    color: #083242;
+    border: 1px solid #c5aeff;
+    padding: 6px 0px;
+    margin-bottom: 12px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 135px;
+    font-size: 16px;
+}
+
+.faTrash{
+    margin-left: 16px;
+}
+
+.completed {
+    color: cadetblue;
+    text-decoration: line-through;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media only screen and (max-width: 768px){
+ .todo-input{
+    width: 300px;
+    margin-bottom: 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+ }
+ 
+ .todo-btn{
+    width: 33%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-top: 2px;
+ }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ .todo{
+    margin-top: 0px;
+ }
 }
